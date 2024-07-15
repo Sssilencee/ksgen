@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <dlfcn.h>
-
 #define u32 u_int32_t
 #define usize size_t
 

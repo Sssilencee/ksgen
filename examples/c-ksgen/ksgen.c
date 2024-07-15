@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <dlfcn.h>
 #include "ksgen.h"
 
 // Your password is securely stored in encrypted config or HSM storage
