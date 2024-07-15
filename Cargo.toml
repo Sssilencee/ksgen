@@ -1,0 +1,31 @@
+[package]
+name = "ksgen"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aes = "0.8.4"
+blake2 = { version = "0.10.6", optional = true }
+bs58 = { version = "0.5.1", optional = true }
+ctr = "0.9.2"
+ed25519-dalek = { version = "2.1.1", features = ["rand_core"], optional = true }
+hex = { version = "0.4.3" }
+rand = "0.8.5"
+ripemd = { version = "0.1.3", optional = true }
+scrypt = "0.11.0"
+secp256k1 = { version = "0.29.0", features = ["rand-std"], optional = true }
+sha2 = { version = "0.10.8", optional = true }
+sha3 = "0.10.8"
+thiserror = "1.0.61"
+
+[features]
+aptos = ["dep:ed25519-dalek"]
+bitcoin = ["dep:bs58", "dep:sha2", "dep:ripemd", "dep:secp256k1"]
+ethereum = ["dep:secp256k1"]
+litecoin = ["dep:bs58", "dep:sha2", "dep:ripemd", "dep:secp256k1"]
+solana = ["dep:bs58", "dep:ed25519-dalek"]
+sui = ["dep:blake2", "dep:ed25519-dalek"]
+tron = ["dep:bs58", "dep:sha2", "dep:secp256k1"]
+
+[lib]
+crate-type = ["staticlib"]
