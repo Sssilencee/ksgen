@@ -46,7 +46,8 @@ typedef struct keystore
     sized_str mac;
 } keystore;
 
-typedef enum network {
+typedef enum network
+{
     NETWORK_APTOS,
     NETWROK_BITCOIN,
     NETWORK_ETHEREUM,
