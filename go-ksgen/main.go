@@ -1,7 +1,7 @@
 package main
 
 /*
-#cgo LDFLAGS: -L ../../target/release -l ksgen
+#cgo LDFLAGS: -L ../target/release -l ksgen
 #include "../c-ksgen/ksgen.h"
 */
 import "C"
